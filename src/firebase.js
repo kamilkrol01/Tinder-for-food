@@ -1,9 +1,19 @@
+import firebase from "firebase"
+
+
 const firebaseConfig = {
-    apiKey: "AIzaSyBoY3nuJS3C5PUbf8A7TNvLXR4zDreHH5w",
-    authDomain: "tinder-recipe.firebaseapp.com",
-    projectId: "tinder-recipe",
-    storageBucket: "tinder-recipe.appspot.com",
-    messagingSenderId: "47061367452",
-    appId: "1:47061367452:web:8f87114cd0938739bd0b59",
-    measurementId: "G-EY24SGS0TZ"
+    apiKey: "AIzaSyAXPhOYO7lB847eGxl3FbrxDO6zExDl1sE",
+    authDomain: "tinder-recipes.firebaseapp.com",
+    projectId: "tinder-recipes",
+    storageBucket: "tinder-recipes.appspot.com",
+    messagingSenderId: "821304440220",
+    appId: "1:821304440220:web:9143ce37325f511546c459",
+    measurementId: "G-1D965D0NZ5"
 };
+
+const firebaseApp = firebase.initializeApp(firebaseConfig);
+const database = firebaseApp.firestore();
+
+console.log(database)
+
+export default database;
