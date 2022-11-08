@@ -2,13 +2,14 @@ import React from "react";
 import Header from "./components/Header";
 import TinderCards from "./components/TinderCards";
 import SwipeButtons from "./components/SwipeButtons";
+import Recipes from "./components/Recipes";
 import {
     BrowserRouter as Router,
     Switch,
     Route,
 } from "react-router-dom";
 
-import './App.css';
+import './css/App.css';
 
 
 function App() {
@@ -18,7 +19,7 @@ function App() {
                 <Switch>
                     <Route path="/recipes">
                         <Header backButton={"/"}/>
-                        <h1>I am the chat page</h1>
+                        <Recipes/>
                     </Route>
                     <Route path="/">
                         <Header/>

@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import TinderCard from "react-tinder-card";
 import database from "../firebase";
-import "../TinderCards.css"
+import "../css/TinderCards.css"
 
 
 function TinderCards() {
@@ -13,6 +13,9 @@ function TinderCards() {
       ))
     }, [])
 
+    const onSwipeLeft = (left) => {
+        console.log("You swiped:" + left)
+    }
 
     return (
         <div>
@@ -22,6 +25,7 @@ function TinderCards() {
                         className={"swipe"}
                         key={food.name}
                         preventSwipe={["up", "down"]}
+                        onSwipe={onSwipeLeft}
                     >
                         <div
                             className={"card"}

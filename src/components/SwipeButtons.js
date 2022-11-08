@@ -4,7 +4,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from "@mui/material/IconButton";
 
-import "../SwipeButtons.css"
+import "../css/SwipeButtons.css"
 
 const SwipeButtons = () => {
     return (
