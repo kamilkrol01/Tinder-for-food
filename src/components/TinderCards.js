@@ -9,15 +9,21 @@ function TinderCards() {
     const [food, setFood] = useState([]);
 
     useEffect(() => {
-      database.collection('recipes').onSnapshot(snapshot => (
-          setFood(snapshot.docs.map(doc => doc.data()))
-      ))
+        database.collection('recipes').onSnapshot(snapshot => (
+            setFood(snapshot.docs.map(doc => doc.data()))
+        ))
     }, [])
 
     const onSwipe = (direction, swipedCake) => {
-        if(direction === "left") {
+        if (direction === "left") {
             let cakes = reactLocalStorage.getObject('likedCakes', []);
-            cakes.push(swipedCake)
+
+            const cakeExist = cakes.some(e => e.name === swipedCake.name)
+
+            if (!cakeExist) {
+                cakes.push(swipedCake);
+            }
+
             reactLocalStorage.setObject('likedCakes', cakes);
             console.log(reactLocalStorage.get('likedCakes', []));
         }

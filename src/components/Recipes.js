@@ -15,6 +15,7 @@ function Recipes() {
                     <div
                         className={"recipe"}
                         style={{backgroundImage: `url(${cake.url}`}}
+                        key={cake.name}
                     >
                         <h3>{cake.name}</h3>
                     </div>

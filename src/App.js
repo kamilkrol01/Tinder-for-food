@@ -15,7 +15,7 @@ import './css/App.css';
 function App() {
     return (
         <div className="App">
-            <Router forceRefresh={"/"}>
+            <Router forceRefresh={true}>
                 <Switch>
                     <Route path="/recipes">
                         <Header backButton={"/"}/>
