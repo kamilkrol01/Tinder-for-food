@@ -1,8 +1,26 @@
 import React from "react";
+import "../css/Recipes.css"
+import {reactLocalStorage} from "reactjs-localstorage";
 
-const Recipes = () => {
+function Recipes() {
+
+    let cakes = reactLocalStorage.getObject('likedCakes')
+    console.log(cakes)
+
+
     return (
-        <h1>elo</h1>
+        <div>
+            <div className={"recipeContainer"}>
+                {cakes.map(cake => (
+                    <div
+                        className={"recipe"}
+                        style={{backgroundImage: `url(${cake.url}`}}
+                    >
+                        <h3>{cake.name}</h3>
+                    </div>
+                ))}
+            </div>
+        </div>
     )
 }
 

@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import TinderCard from "react-tinder-card";
 import database from "../firebase";
+import {reactLocalStorage} from 'reactjs-localstorage';
 import "../css/TinderCards.css"
 
 
@@ -13,8 +14,13 @@ function TinderCards() {
       ))
     }, [])
 
-    const onSwipeLeft = (left) => {
-        console.log("You swiped:" + left)
+    const onSwipe = (direction, swipedCake) => {
+        if(direction === "left") {
+            let cakes = reactLocalStorage.getObject('likedCakes', []);
+            cakes.push(swipedCake)
+            reactLocalStorage.setObject('likedCakes', cakes);
+            console.log(reactLocalStorage.get('likedCakes', []));
+        }
     }
 
     return (
@@ -25,7 +31,7 @@ function TinderCards() {
                         className={"swipe"}
                         key={food.name}
                         preventSwipe={["up", "down"]}
-                        onSwipe={onSwipeLeft}
+                        onSwipe={(direction) => onSwipe(direction, food)}
                     >
                         <div
                             className={"card"}
