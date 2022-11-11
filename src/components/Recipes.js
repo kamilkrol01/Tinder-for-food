@@ -1,27 +1,29 @@
 import React from "react";
-import "../css/Recipes.css"
 import {reactLocalStorage} from "reactjs-localstorage";
+
+import "../css/Recipes.css"
+
 
 function Recipes() {
 
     let cakes = reactLocalStorage.getObject('likedCakes')
-    console.log(cakes)
-
 
     return (
-        <div>
-            <div className={"recipeContainer"}>
-                {cakes.map(cake => (
-                    <div
-                        className={"recipe"}
-                        style={{backgroundImage: `url(${cake.url}`}}
-                        key={cake.name}
-                    >
-                        <h3>{cake.name}</h3>
-                    </div>
-                ))}
-            </div>
+
+        <div className={"recipeContainer"}>
+            {cakes.map(cake => (
+                <div
+                    className={"recipe"}
+                    style={{backgroundImage: `url(${cake.url}`}}
+                    key={cake.name}
+                >
+                    <h3>{cake.name}</h3>
+                    <p>{cake.description}</p>
+                </div>
+
+            ))}
         </div>
+
     )
 }
 

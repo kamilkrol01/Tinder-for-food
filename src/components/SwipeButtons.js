@@ -7,6 +7,7 @@ import IconButton from "@mui/material/IconButton";
 import "../css/SwipeButtons.css"
 
 const SwipeButtons = () => {
+
     return (
         <div className={"swipeButtons"}>
             <IconButton>
@@ -18,5 +19,6 @@ const SwipeButtons = () => {
         </div>
     )
 }
+
 
 export default SwipeButtons

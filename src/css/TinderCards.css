@@ -16,6 +16,11 @@
     text-align: center;
 }
 
+.card > p {
+    color: white;
+    margin-top: 300px;
+}
+
 .cardContainer {
     display: flex;
     justify-content: center;

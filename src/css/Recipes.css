@@ -11,9 +11,19 @@
 }
 
 .recipe > h3 {
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
     color: white;
     font-size: 30px;
     text-align: center;
+}
+
+.recipe > p {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    margin-top: 40px;
 }
 
 .recipeContainer {
