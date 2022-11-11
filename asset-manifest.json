@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfd73f5d.css",
-    "main.js": "/static/js/main.30493b20.js",
-    "static/js/787.eb8d15da.chunk.js": "/static/js/787.eb8d15da.chunk.js",
-    "index.html": "/index.html",
-    "main.bfd73f5d.css.map": "/static/css/main.bfd73f5d.css.map",
-    "main.30493b20.js.map": "/static/js/main.30493b20.js.map",
-    "787.eb8d15da.chunk.js.map": "/static/js/787.eb8d15da.chunk.js.map"
+    "main.css": "/food-tinder/static/css/main.bfd73f5d.css",
+    "main.js": "/food-tinder/static/js/main.348116b3.js",
+    "static/js/787.eb8d15da.chunk.js": "/food-tinder/static/js/787.eb8d15da.chunk.js",
+    "index.html": "/food-tinder/index.html",
+    "main.bfd73f5d.css.map": "/food-tinder/static/css/main.bfd73f5d.css.map",
+    "main.348116b3.js.map": "/food-tinder/static/js/main.348116b3.js.map",
+    "787.eb8d15da.chunk.js.map": "/food-tinder/static/js/787.eb8d15da.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bfd73f5d.css",
-    "static/js/main.30493b20.js"
+    "static/js/main.348116b3.js"
   ]
 }
