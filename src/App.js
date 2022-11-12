@@ -7,6 +7,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
+    HashRouter,
 } from "react-router-dom";
 
 import './css/App.css';
@@ -16,19 +17,21 @@ import SwipeButtons from "./components/SwipeButtons";
 function App() {
     return (
         <div className="App">
-            <Router forceRefresh={true}>
-                <Switch>
-                    <Route path="/recipes">
-                        <Header backButton={"/"}/>
-                        <Recipes/>
-                    </Route>
-                    <Route path="/">
-                        <Header/>
-                        <TinderCards/>
-                        <SwipeButtons/>
-                    </Route>
-                </Switch>
-            </Router>
+            <HashRouter>
+                <Router forceRefresh={true}>
+                    <Switch>
+                        <Route path="/recipes">
+                            <Header backButton={"/"}/>
+                            <Recipes/>
+                        </Route>
+                        <Route path="/">
+                            <Header/>
+                            <TinderCards/>
+                            <SwipeButtons/>
+                        </Route>
+                    </Switch>
+                </Router>
+            </HashRouter>
         </div>
     );
 }
