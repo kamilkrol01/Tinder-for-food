@@ -17,21 +17,19 @@ import SwipeButtons from "./components/SwipeButtons";
 function App() {
     return (
         <div className="App">
-            <HashRouter>
-                <Router forceRefresh={true}>
-                    <Switch>
-                        <Route path="/recipes">
-                            <Header backButton={"/"}/>
-                            <Recipes/>
-                        </Route>
-                        <Route path="/">
-                            <Header/>
-                            <TinderCards/>
-                            <SwipeButtons/>
-                        </Route>
-                    </Switch>
-                </Router>
-            </HashRouter>
+            <Router forceRefresh={true}>
+                <Switch>
+                    <Route path="/recipes">
+                        <Header backButton={"/"}/>
+                        <Recipes/>
+                    </Route>
+                    <Route path="/">
+                        <Header/>
+                        <TinderCards/>
+                        <SwipeButtons/>
+                    </Route>
+                </Switch>
+            </Router>
         </div>
     );
 }
